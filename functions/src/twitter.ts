@@ -3,8 +3,8 @@ import { TwitterApi } from "twitter-api-v2";
 import { openai } from "./openai";
 
 export const twitterClient = new TwitterApi({
-    clientId: 'VTh4QVM3Z3oxUmpvODVpQTJIYjI6MTpjaQ',
-    clientSecret: 'Dxdg4vuuV12p2njBnObBsY5KQL-OrOhWe3btNu1dLzLhhjWihd'
+    clientId: process.env.TWITTER_CLIENT_ID ?? '',
+    clientSecret: process.env.TWITTER_CLIENT_SECRET
 });
 export const callbackURL = 'http://127.0.0.1:5000/twitterbot-f099e/europe-west2/callback';
 
